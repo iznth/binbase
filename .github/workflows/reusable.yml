@@ -27,7 +27,7 @@ jobs:
 
   publish:
     if: |
-      github.repository == 'qdm12/binpot' &&
+      github.repository == 'iznth/binbase' &&
       github.event_name == 'push' &&
       github.event.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
@@ -61,6 +61,6 @@ jobs:
             CREATED=${{ steps.vars.outputs.created }}
             REVISION=${{ steps.vars.outputs.revision }}
           tags: |
-            qmcgaw/binpot:${{ inputs.name }}
-            qmcgaw/binpot:${{ inputs.name }}-${{ inputs.version }}
+            iznth/binbase:${{ inputs.name }}
+            iznth/binbase:${{ inputs.name }}-${{ inputs.version }}
           push: true
